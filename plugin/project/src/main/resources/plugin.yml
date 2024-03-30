@@ -1,0 +1,4 @@
+name: 'FIXME' #FIXME
+version: '${version}'
+api-version: '${apiVersion}'
+main: 'FIXME' #FIXME
