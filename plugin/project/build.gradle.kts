@@ -41,7 +41,7 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
-    implementation("io.insert-koin:koin-core:3.1.2")
+    implementation("io.insert-koin:koin-core:3.5.3")
 
     compileOnly("org.spigotmc:spigot-api:${mcApiVersion}")
 
