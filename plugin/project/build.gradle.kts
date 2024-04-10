@@ -1,7 +1,4 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ConfigureShadowRelocation
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-import com.github.jengelman.gradle.plugins.shadow.transformers.ServiceFileTransformer
-import com.github.jengelman.gradle.plugins.shadow.transformers.TransformerContext
 import com.google.protobuf.gradle.id
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -113,24 +110,6 @@ tasks {
             relocate("org.intellij", "shaded.org.intellij")
             relocate("org.jetbrains", "shaded.org.jetbrains")
             relocate("org.koin", "shaded.org.koin")
-        }
-    }
-
-    build {
-        dependsOn(shadowJar).dependsOn(configureShadowRelocation)
-
-        doLast {
-            val samePluginInDirectory = fileTree(pluginDirectoryPath) {
-                include("${artifactName}-*.jar")
-            }
-            delete(samePluginInDirectory)
-
-            copy {
-                from("build/libs/${artifactName}-${version}-all.jar")
-                into(pluginDirectoryPath)
-            }
-
-            //TODO auto reload server
         }
     }
 
