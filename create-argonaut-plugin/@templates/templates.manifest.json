@@ -1,0 +1,53 @@
+{
+  "variableTemplates": [
+    {
+      "key": "buildscript.plugins.grpc",
+      "src": "build.gradle.kts.plugins.grpc"
+    },
+    {
+      "key": "buildscript.dependencies.coroutine",
+      "src": "build.gradle.kts.dependencies.coroutine"
+    },
+    {
+      "key": "buildscript.dependencies.grpc",
+      "src": "build.gradle.kts.dependencies.grpc"
+    },
+    {
+      "key": "buildscript.tasks.grpc",
+      "src": "build.gradle.kts.tasks.grpc"
+    }
+  ],
+  "variables": [
+    "plugin_name"
+  ],
+  "templates": [
+    {
+      "src": "AppModule.kt",
+      "dest": "src/main/kotlin/kr/argonaut/%plugin_name%/AppModule.kt"
+    },
+    {
+      "src": "Plugin.kt",
+      "dest": "src/main/kotlin/kr/argonaut/%plugin_name%/Plugin.kt"
+    },
+    {
+      "src": "config.yml",
+      "dest": "src/main/resources/config.yml"
+    },
+    {
+      "src": "plugin.yml",
+      "dest": "src/main/resources/plugin.yml"
+    },
+    {
+      "src": "build.gradle.kts",
+      "dest": "build.gradle.kts"
+    },
+    {
+      "src": "gradle.properties",
+      "dest": "gradle.properties"
+    },
+    {
+      "src": "settings.gradle.kts",
+      "dest": "settings.gradle.kts"
+    }
+  ]
+}

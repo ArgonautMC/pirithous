@@ -1,0 +1,13 @@
+{
+  "variables": {
+    "plugin_name": "please type your plugin name"
+  },
+  "use": [
+    "coroutine",
+    "grpc"
+  ],
+  "#you can use at value of 'use'": [
+    "coroutine",
+    "grpc"
+  ]
+}

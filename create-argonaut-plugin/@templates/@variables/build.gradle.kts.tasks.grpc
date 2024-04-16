@@ -1,0 +1,42 @@
+
+
+    sourceSets{
+        main {
+            proto {
+                srcDir("src/../aethalides/proto")
+            }
+        }
+        getByName("main"){
+            java {
+                srcDirs(
+                    "build/generated/source/proto/main/java",
+                    "build/generated/source/proto/main/kotlin"
+                )
+            }
+        }
+    }
+
+    protobuf {
+        protoc {
+            artifact = "com.google.protobuf:protoc:$protobufVersion"
+        }
+        plugins {
+            id("grpc") {
+                artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
+            }
+            id("grpckt") {
+                artifact = "io.grpc:protoc-gen-grpc-kotlin:$grpcKotlinVersion:jdk8@jar"
+            }
+        }
+        generateProtoTasks {
+            all().forEach {
+                it.plugins {
+                    id("grpc")
+                    id("grpckt")
+                }
+                it.builtins {
+                    id("kotlin")
+                }
+            }
+        }
+    }

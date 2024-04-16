@@ -1,0 +1,39 @@
+{
+  "name": "create-argonaut-plugin",
+  "version": "0.0.36",
+  "description": "cli for create argonaut plugin",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node create-plugin.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArgonautMC/pirithous.git"
+  },
+  "bin": {
+    "create-argonaut-plugin": "dist/create-plugin.js",
+    "create-argonaut-config": "dist/create-config.js"
+  },
+  "keywords": [
+    "argonaut",
+    "minecraft",
+    "plugin",
+    "kotlin"
+  ],
+  "author": "Raul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArgonautMC/pirithous/issues"
+  },
+  "homepage": "https://github.com/ArgonautMC/pirithous#readme",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}

@@ -1,0 +1,4 @@
+name: '%plugin_name%'
+version: '${version}'
+api-version: '${apiVersion}'
+main: 'kr.argonaut.%plugin_name%.Plugin'
