@@ -1,6 +1,6 @@
 {
   "name": "create-argonaut-plugin",
-  "version": "0.0.36",
+  "version": "1.0.0",
   "description": "cli for create argonaut plugin",
   "main": "dist/index.js",
   "scripts": {

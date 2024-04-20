@@ -57,6 +57,13 @@ java {
 }
 
 tasks {
+    compileJava {
+        targetCompatibility = "17"
+    }
+    compileKotlin {
+        kotlinOptions.jvmTarget = "17"
+    }
+
     withType<JavaCompile>().configureEach {
         if (java17 >= 10 || JavaVersion.current().isJava10Compatible()) {
             options.release.set(java17)
